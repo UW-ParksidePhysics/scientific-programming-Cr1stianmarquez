@@ -1,3 +1,4 @@
+Web VPython 3.2
 from vpython import *
 # GlowScript 3.0 VPython
 
@@ -18,10 +19,11 @@ To pan left/right and up/down, Shift-drag.
 Touch screen: pinch/extend to zoom, swipe or two-finger rotate."""
 
 xaxis=cylinder(color=vector(1,0,0), pos=vector(0,0,0), axis=vector(10,0,0), radius=0.3)
-xlbl=label(pos=vector(11,0,0), text="X", color=color.red, opacity=0, height=30, box=0)
+xlbl=label(pos=vector(11,0,0), text="x", color=color.red, opacity=0, height=30, box=0)
 yaxis=cylinder(color=color.green, pos=vector(0,0,0), axis=vector(0,10,0), radius=0.3)
-ylbl=label(pos=vector(0,11,0), text="Y", color=color.green, opacity=0, height=30, box=0)
+ylbl=label(pos=vector(0,11,0), text="y", color=color.green, opacity=0, height=30, box=0)
 zaxis=cylinder(color=color.blue, pos=vector(0,0,0), axis=vector(0,0,10), radius=0.3)
-xlbl=label(pos=vector(0,0,11), text="Z", color=color.blue, opacity=0, height=30, box=0)
+xlbl=label(pos=vector(0,0,11), text="z", color=color.blue, opacity=0, height=30, box=0)
 
-r = arrow(pos=vector(0,0,0), axis = vector(2,10,7), color=color.white, shaftwidth=0.5)
+r = arrow(pos=vector(0,0,0), axis = vector(6,2,3), color=color.yellow, shaftwidth=0.5)
+rlbl=label(pos=vector(6,2,3), text="r=6x+2y+3z", color=color.black, height=20)
