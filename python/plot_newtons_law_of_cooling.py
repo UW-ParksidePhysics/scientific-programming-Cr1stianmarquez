@@ -1,4 +1,10 @@
-### My project is based on Newtons Law of Cooling. It compares my experimental value of the coefficent of cooling with the actual value for 16 oz of water at room temperature (28.6 degrees Celsius) at an inital temperature of 81 degrees celsius. I thought of this project due to issues I face when heating my coffee in the morning and having to drink it cold because of my schedule. This program is designed to plot my experimental data as well as show it in a table and state all conditions. The graph plots my data from the experiment and gives a regression line. Now I will be able to determine when to heat up my coffee and how hot it should be to be luke warm when I drink it.
+### My project is based on Newtons Law of Cooling. It compares my experimental value of the coefficent of 
+cooling with the actual value for 16 oz of water at room temperature (28.6 degrees Celsius) at an inital
+temperature of 81 degrees celsius. I thought of this project due to issues I face when heating my coffee 
+in the morning and having to drink it cold because of my schedule. This program is designed to plot my
+experimental data as well as show it in a table and state all conditions. The graph plots my data from the 
+experiment and gives a regression line. Now I will be able to determine when to heat up my coffee and how 
+hot it should be to be luke warm when I drink it.
 
 import math
 import matplotlib.pyplot as plt
