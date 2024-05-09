@@ -115,7 +115,7 @@ plt.ylim(-2 * np.amax(eigenvectors), 2 * np.amax(eigenvectors))
 plt.plot(x, np.linspace(0, 0, 110), color='black')
 plt.title(f"Select Wavefuctions for a {'Square'} Potential\n"
           f"on a Spatial Grid of 90 Points")
-name = 'Cristian Marquez'
+name = 'Made By Cristian Marquez'
 plt.annotate(f'Created by {name} {date.today().isoformat()}', (.02, .054), (-7.5, .25),
              xycoords='axes fraction', textcoords='offset points', va='top')
 
