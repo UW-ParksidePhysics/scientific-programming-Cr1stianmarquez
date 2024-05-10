@@ -97,7 +97,7 @@ else:
 
 # PART 2 VISUALIZE VECTORS IN SPACE
 number_of_eigenvalues = 3
-matrix = generate_matrix(-10, 10, 110, 'Harmonic', 100)
+matrix = generate_matrix(-10, 10, 110, 'Harmonic', 120)
 eigenvalue, eigenvector = lowest_eigenvector(matrix, number_of_eigenvalues)
 eigenvalues = eigenvalue[:number_of_eigenvalues]
 eigenvectors = eigenvector[:number_of_eigenvalues]
@@ -114,7 +114,7 @@ plt.legend(labels=labels, loc='upper right')
 plt.ylim(-2 * np.amax(eigenvectors), 2 * np.amax(eigenvectors))
 plt.plot(x, np.linspace(0, 0, 110), color='black')
 plt.title(f"Select Wavefuctions for a {'Square'} Potential\n"
-          f"on a Spatial Grid of 90 Points")
+          f"on a Spatial Grid of 110 Points")
 name = 'Made By Cristian Marquez'
 plt.annotate(f'Created by {name} {date.today().isoformat()}', (.02, .054), (-7.5, .25),
              xycoords='axes fraction', textcoords='offset points', va='top')
