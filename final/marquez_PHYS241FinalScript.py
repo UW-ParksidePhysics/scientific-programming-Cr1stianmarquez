@@ -1,14 +1,14 @@
 from annotate_plot import annotate_plot
 from plot_data_with_fit import plot_data_with_fit
 from read_two_columns_text import read_two_columns_text
-from calculate_quadratic_fit import calculate_quadratic_fit
-from calculate_bivariate_statistics import calculate_bivariate_statistics
-from calculate_lowest_eigenvectors import lowest_eigenvector
+from calculate_quadratic_fit import compute_quadratic_coefficients
+from calculate_bivariate_statistics import compute_bivariate_statistics
+from calculate_lowest_eigenvectors import calculate_lowest_eigenvectors
 from equations_of_state import fit_eos
 from generate_matrix import generate_matrix
 import matplotlib.pyplot as plt
 import numpy as np
-from datetime import date
+from datetime import datetime
 from convert_units import convert_units
 
 
@@ -27,7 +27,7 @@ if __name__ == '__main__':
   array = read_two_columns_text(filename) / 2
 
   #STEP 5 
-  quad_coefficients_temp = calculate_quadratic_fit(array)
+  quad_coefficients_temp = compute_quadratic_coefficients(array)
   quadratic_coefficients = quad_coefficients_temp[::-1]
 
   eos_fit_curve, eos_parameters = fit_eos(array[0], array[1],     quadratic_coefficients, eos='murnaghan')
@@ -40,7 +40,7 @@ if __name__ == '__main__':
   data_array = np.array([convert_units(array[0], 'cubic bohr/atom'),
                        convert_units(array[1], 'rydberg/atom')])
 #STEP 4 Bivariate Statistics
-  statistics = calculate_bivariate_statistics(data_array)
+  statistics = compute_bivariate_statistics(data_array)
   min_x = statistics[2]
   max_x = statistics[3]
   min_y = statistics[4]
@@ -102,7 +102,7 @@ else:
 number_of_eigenvalues = 3
 #(minimum_x, maximum_x, number_of_dimensions, potential_name, potential_parameter)
 matrix = generate_matrix(-10, 10, 110, 'harmonic', 3)
-eigenvalue, eigenvector = lowest_eigenvector(matrix, number_of_eigenvalues)
+eigenvalue, eigenvector = calculate_lowest_eigenvectors(matrix, number_of_eigenvalues)
 eigenvalues = eigenvalue[:number_of_eigenvalues]
 eigenvectors = eigenvector[:number_of_eigenvalues]
 x = np.linspace(-10, 10, 110)
