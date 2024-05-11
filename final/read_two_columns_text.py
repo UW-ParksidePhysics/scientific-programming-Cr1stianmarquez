@@ -24,6 +24,6 @@ def read_data_from_file(filename):
 
 
 if __name__ == "__main__":
-    test_file = '../python/volumes_energies.dat'
+    test_file = 'C.Fd-3m.GGA-PBEsol.volumes_energies.dat'
     test_data = read_data_from_file(test_file)
     print(f'test_data = {test_data}, shape = {test_data.shape}')
